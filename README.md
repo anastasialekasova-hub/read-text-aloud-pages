@@ -4,6 +4,7 @@ Welcome and uninstall pages for the Read Text Aloud Chrome extension, served via
 
 - `/welcome/` — opens once after installation
 - `/uninstall/` — feedback form, opens when the extension is removed
+- `/feedback/` — opens from the in-extension rating prompt after 1–3 stars
 - the privacy policy lives in a separate repo: `read-text-aloud-privacy`
 
 The repository must stay public: GitHub Pages does not serve private repos on the free plan.
@@ -12,6 +13,6 @@ The repository must stay public: GitHub Pages does not serve private repos on th
 a Chrome toolbar, an article and the extension's popup and player (version 1.0.0).
 
 `uninstall/index.html` posts to a Google Form. Fill in `FORM_ID`, `ENTRY_REASON` and `ENTRY_DETAILS`
-at the bottom of the file from the form's pre-filled link. Until then the page shows the thank-you
+at the bottom of the file from the form's pre-filled link (`feedback/index.html` has `FORM_ID` and `ENTRY_DETAILS` only). Until then the page shows the thank-you
 state and sends nothing. The "Get Read Text Aloud back" link points to a Chrome Web Store search until
 the listing has its own address.
